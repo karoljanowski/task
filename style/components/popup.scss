@@ -11,14 +11,14 @@
     align-items: center;
 
     & &__content {
-        width: 90vw;
-        height: 35vh;
+        max-width: 800px;
+        margin: 2rem;
         background-color: $white-color;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
         align-items: stretch;
         padding: 2rem;
+        gap: 2rem;
     }
 
     & &__title {
@@ -46,10 +46,6 @@
     }
 
     @media screen and (min-width: 576px) {
-        & &__content {
-            width: 80vw;
-        }
-
         & &__title {
             font-size: 1.75rem;
         }
@@ -62,8 +58,6 @@
 
     @media screen and (min-width: 1024px) {
         & &__content {
-            width: 60vw;
-            height: 40vh;
             padding: 3rem;
         }
 
@@ -83,10 +77,6 @@
     }
 
     @media screen and (min-width: 1440px) {
-        & &__content {
-            width: 45vw;
-            height: 40vh;
-        }
 
         & &__title {
             font-size: 2rem;
