@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div id="app">
+    <header class="header">
+      <div class="header__bg"></div>
+      <div class="header__content">
+        <h1 class="header__title">
+          black
+        </h1>
+        <div class="header__flex-second-line">
+          <h1 class="header__title2">
+            week
+          </h1>
+          <div class="header__frame">
+            <span>tylko do</span> <span>30.11.2022</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="content">
+        <section class="section">
+          <div class="section__content">
+
+            <h3 class="section__title">black week</h3>
+            <span class="section__date">tylko do 30.11.2022</span>
+            <div class="section__divider"></div>
+            <p class="section__description">Spośród 479 lokali mieszkalnych <span
+                class="section__text-beige">wyróżniliśmy
+                120 mieszkań oraz 5 domów w
+                promocyjnej cenie</span> zlokalizowanych
+              na
+              7 naszych inwestycjach: Katowice, Apatamenty Barbary, Katowice, ul. Asnyka. Katowice, ul. Kornasa,
+              Chorzów,
+              ul. 17-go sierpnia, Knurów Aleja Lipowa II, Chrzanów, ul. Śląska, Oświęcim, ul. Willowa.</p>
+
+          </div>
+        </section>
+
+        <aside class="aside">
+          <div class="aside__content">
+            <h4 class="aside__title">
+              Jesteś zainteresowany/na?
+              Skontaktuj się z nami.
+            </h4>
+            <form id="form" class="aside__form">
+              <input class="aside__input" id="name" name="name" type="text" placeholder="Imię, nazwisko">
+              <input class="aside__input" id="mail" name="mail" type="email" placeholder="E-mail">
+              <input class="aside__input" id="phone" name="phone" type="tel" placeholder="Telefon">
+              <select class="aside__input" name="city" id="city">
+                <option value="" disabled selected>Miasto, w którym szukam mieszkania </option>
+                <option value="Katowice">Katowice</option>
+                <option value="Chorzów">Chorzów</option>
+                <option value="Knurów">Knurów</option>
+                <option value="Sosnowiec">Sosnowiec</option>
+              </select>
+              <div class="aside__agree">
+                <input class="aside__accept" name="accept" id="accept" type="checkbox">
+                <label class="aside__label" for="accept">
+                  * Wyrażam zgodę na przetwarzanie moich danych osobowych w celu przesyłania mi przez GRUPĘ
+                  DOMBUD (współadministratorzy), informacji w celach nawiązania kontaktu i korespondencji, zgodnie z
+                  postanowieniami RODO. Oświadczam, że zapoznałem/am się z Zasadami Przetwarzania Danych z dnia 25 maja
+                  2018
+                  r. dostępnymi na stronie internetowej www.dombud.pl i akceptuję ich postanowienia. Pozostaję
+                  świadomy/a,
+                  że
+                  mogę w każdej chwili wycofać udzieloną zgodę na przetwarzanie danych osobowych we wskazanym powyżej
+                  celu
+                  poprzez wysłanie maila w tym przedmiocie na adres mailowy dombud@dombud.pl.
+                </label>
+              </div>
+
+            </form>
+          </div>
+        </aside>
+        <div class="section__bottom"></div>
+        <button form="form" class="aside__button">Wyślij formularz</button>
+      </div>
+
+      <section class="news">
+        <h3 class="news__header">Aktualności</h3>
+        <div class="news__divider"></div>
+        <div class="news__container">
+        </div>
+      </section>
+
+    </main>
+
+
+
+    <div class="popup">
+      <div class="popup__content">
+        <h4 class="popup__title">Dziękujemy za kontakt, <span class="popup__name"></span> !</h4>
+        <p class="popup__description">Nasza oferta dotycząca miasta <span class="popup__city"></span> została wysłana na
+          <span class="popup__mail"></span></p>
+        <button class="popup__button">Zamknij</button>
+      </div>
+    </div>
+
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>

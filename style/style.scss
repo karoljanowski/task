@@ -1,0 +1,11 @@
+@import './normalize.scss';
+@import './fonts.scss';
+@import './root.scss';
+@import './components/header.scss';
+@import './components/main.scss';
+@import './components/popup.scss';
+@import './components/news.scss';
+
+body {
+    font-family: 'DM Sans', sans-serif;
+}

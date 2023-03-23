@@ -1,0 +1,262 @@
+@import './divider.scss';
+
+.content {
+    display: grid;
+    grid-template: auto 70px auto 70px/ 1fr;
+
+    @media screen and (min-width: 768px) {
+        grid-template: auto 100px auto 70px/ 1fr;
+    }
+
+    @media screen and (min-width: 1024px) {
+        grid-template: minmax(600px, auto) 100px / 1fr 1fr;
+        margin-top: -55px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        grid-template: minmax(720px, auto) 100px / 1fr 1fr;
+
+    }
+
+    // grid-template: minmax(720px, auto) 100px / 1fr 1fr;
+    // margin-top: -55px;
+
+
+}
+
+.section {
+    order: 1;
+
+    & &__content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3rem 2rem;
+
+    }
+
+    & &__title {
+        font-size: 2rem;
+        text-transform: capitalize;
+    }
+
+    & &__date {
+        font-size: 2rem;
+    }
+
+    & &__divider {
+        @include divider;
+
+    }
+
+    & &__description {
+        font-size: 0.875rem;
+        line-height: 1.2rem;
+
+    }
+
+    & &__text-beige {
+        color: $beige;
+    }
+
+    @media screen and (min-width: 768px) {
+
+        & &__content {
+            margin-inline: auto;
+            width: 80%;
+        }
+
+        & &__title,
+        & &__date {
+            font-size: 2.5rem;
+        }
+
+        & &__description {
+            font-size: 1rem;
+            line-height: 1.5rem;
+
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        & &__content {
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: 102px;
+            margin-top: -25px;
+
+        }
+
+        & &__title,
+        & &__date {
+            font-size: 3.25rem;
+        }
+
+        & &__description {
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+        }
+    }
+}
+
+.section__bottom {
+    order: 2;
+    background: url('/images/section_img.png') center;
+
+    @media screen and (min-width: 1024px) {
+        order: 3;
+        width: 85%;
+        justify-self: end;
+    }
+
+}
+
+.aside {
+
+    order: 3;
+    background-color: $beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $aside-color;
+
+
+    & &__content {
+        padding: 3rem 2rem;
+    }
+
+    & &__title {
+        font-size: 1.75rem;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+    }
+
+    & &__form {
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    & &__input {
+        font-family: inherit;
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        border-bottom: 1px solid $border-input;
+        padding-bottom: 5px;
+        color: $aside-color;
+        font-size: 0.875rem;
+
+        &::placeholder {
+            color: $aside-color;
+        }
+    }
+
+    & &__error-input {
+        border-bottom: 1px solid red;
+    }
+
+    & &__agree {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        font-size: 0.5rem;
+
+    }
+
+    & &__error-checkbox {
+        color: red;
+    }
+
+    & &__accept {
+        min-width: 20px;
+        min-height: 20px;
+        accent-color: $white;
+    }
+
+    @media screen and (min-width: 768px) {
+        & &__content {
+            width: 80%;
+            margin-inline: auto;
+        }
+
+        & &__title {
+            font-size: 2rem;
+        }
+
+
+        & &__input {
+            font-size: 1rem;
+        }
+
+        & &__agree {
+            font-size: 0.6rem;
+            line-height: 0.875rem;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        order: 2;
+        padding-top: 55px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        & &__content {
+            padding: 0;
+            margin-left: 142px;
+            max-width: 534px;
+        }
+
+        & &__title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        & &__form {
+            gap: 2.125rem;
+        }
+
+        & &__agree {
+            gap: 25px;
+        }
+
+        & &__input {
+            padding-bottom: 0.625rem;
+            font-size: 1.125rem;
+        }
+
+        & &__accept {
+            min-width: 30px;
+            min-height: 30px;
+        }
+    }
+
+
+}
+
+.aside__button {
+    order: 4;
+    background: rgb(228, 219, 191);
+    background: linear-gradient(90deg, rgba(228, 219, 191, 1) 0%, rgba(188, 177, 142, 1) 50%, rgba(149, 136, 94, 1) 100%);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 0;
+    color: $aside-color;
+
+    @media screen and (min-width: 1024px) {
+        order: 4;
+        width: 85%;
+        font-size: 1.125rem;
+    }
+
+    @media screen and (min-width: 1440px) {
+        order: 4;
+        width: 85%;
+        font-size: 1.375rem;
+    }
+
+}

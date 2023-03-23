@@ -1,0 +1,105 @@
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+
+    & &__content {
+        width: 90vw;
+        height: 35vh;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: stretch;
+        padding: 2rem;
+    }
+
+    & &__title {
+        font-size: 1.5rem;
+    }
+
+    & &__description {
+        font-size: 1rem;
+    }
+
+    & &__button {
+        padding: 0.5rem;
+        font-family: inherit;
+        border: 0;
+        background-color: $beige;
+        font-weight: 600;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+
+    & &__city,
+    & &__mail {
+        font-weight: 600;
+    }
+
+    @media screen and (min-width: 576px) {
+        & &__content {
+            width: 80vw;
+        }
+
+        & &__title {
+            font-size: 1.75rem;
+        }
+
+        & &__description {
+            font-size: 1.25rem;
+        }
+
+    }
+
+    @media screen and (min-width: 1024px) {
+        & &__content {
+            width: 60vw;
+            height: 40vh;
+            padding: 3rem;
+        }
+
+        & &__title {
+            font-size: 2rem;
+        }
+
+        & &__description {
+            font-size: 1.5rem;
+        }
+
+        & &__button {
+            padding: 1rem;
+            font-size: 1.125rem;
+        }
+
+    }
+
+    @media screen and (min-width: 1440px) {
+        & &__content {
+            width: 45vw;
+            height: 40vh;
+        }
+
+        & &__title {
+            font-size: 2rem;
+        }
+
+        & &__description {
+            font-size: 1.5rem;
+        }
+
+        & &__button {
+            padding: 1rem;
+            font-size: 1.125rem;
+        }
+
+    }
+
+}
