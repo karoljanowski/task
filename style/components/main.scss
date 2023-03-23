@@ -57,7 +57,7 @@
     }
 
     & &__text-beige {
-        color: $beige;
+        color: $beige-color;
     }
 
     @media screen and (min-width: 768px) {
@@ -115,11 +115,11 @@
 .aside {
 
     order: 3;
-    background-color: $beige;
+    background-color: $beige-color;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: $aside-color;
+    color: $dark-color;
 
 
     & &__content {
@@ -145,14 +145,14 @@
         background-color: transparent;
         border: 0;
         outline: 0;
-        border-bottom: 1px solid $border-input;
+        border-bottom: 1px solid $light-color;
         padding-bottom: 5px;
-        color: $aside-color;
+        color: $dark-color;
         font-size: 0.875rem;
 
 
         &::placeholder {
-            color: $aside-color;
+            color: $dark-color;
         }
     }
 
@@ -168,7 +168,7 @@
     }
 
     & &__error-input {
-        border-bottom: 1px solid red;
+        border-bottom: 1px solid $red-color;
     }
 
     & &__agree {
@@ -181,14 +181,30 @@
     }
 
     & &__error-checkbox {
-        color: red;
+        color: $red-color;
     }
 
     & &__accept {
-        width: 30px;
-        height: 30px;
-        accent-color: $white;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background-color: $white-color;
+
+        &::after {
+            content: "\2713";
+            height: 100%;
+            display: none;
+            place-content: center;
+        }
+
+        &:checked::after {
+            display: grid;
+
+        }
     }
+
 
     @media screen and (min-width: 768px) {
         & &__content {
@@ -242,8 +258,8 @@
         }
 
         & &__accept {
-            min-width: 30px;
-            min-height: 30px;
+            width: 30px;
+            height: 30px;
         }
     }
 
@@ -259,7 +275,7 @@
     font-weight: 600;
     text-transform: uppercase;
     border: 0;
-    color: $aside-color;
+    color: $dark-color;
 
     @media screen and (min-width: 1024px) {
         order: 4;

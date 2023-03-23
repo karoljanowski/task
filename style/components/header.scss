@@ -1,6 +1,6 @@
 .header {
     position: relative;
-    color: $white;
+    color: $white-color;
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
     display: grid;
@@ -63,7 +63,7 @@
     & &__frame {
         margin-top: -0.5vw;
         align-self: flex-start;
-        border: 0.32vw solid $beige;
+        border: 0.32vw solid $beige-color;
         padding: 1.5vw 1.2vw;
         transform: rotate(10deg);
         display: flex;
