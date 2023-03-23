@@ -14,17 +14,17 @@
     }
 
     & &__container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: stretch;
-        gap: 1rem;
+        max-width: 1600px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
     }
 
     & &__article {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 150px 30px 1fr 30px;
+        grid-template-rows: 150px 40px 1fr 30px;
         grid-template-areas:
             "img img"
             "date category"
@@ -97,17 +97,11 @@
 
     }
 
-    @media screen and (min-width: 574px) {
-        & &__container {
-            width: 80%;
-            margin: 0 auto;
-            gap: 1.5rem;
-        }
-    }
+    @media screen and (min-width: 1024px) {
+        width: 85%;
 
-    @media screen and (min-width: 768px) {
-        & &__header {
-            font-size: 2.5rem;
+        & &__container {
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
         }
 
         & &__article {
@@ -118,87 +112,21 @@
             height: 200px;
         }
 
-        & &__category,
-        & &__date {
-            font-size: 1.25rem;
-        }
-
-        & &__title {
-            font-size: 2rem;
-        }
-
-        & &__read {
-            font-size: 1.375rem;
-        }
-    }
-
-    @media screen and (min-width: 1024px) {
-        width: 85%;
-
         & &__header {
-            margin-top: 1.5rem;
+            font-size: 2.5rem;
         }
 
-        & &__container {
-            width: 70%;
-        }
-
-        & &__article {
-            grid-template-rows: 250px 40px 1fr 30px;
-        }
-
-        & &__image {
-            height: 250px;
-        }
-
-        & &__category,
-        & &__date {
-            font-size: 1.375rem;
+        & &__date,
+        & &__category {
+            font-size: 1.125rem;
         }
 
         & &__title {
-            padding: 1rem 0.625rem;
+            font-size: 1.5rem;
         }
 
         & &__read {
-            font-size: 1.5rem;
+            font-size: 1.125rem;
         }
-
-
-    }
-
-    @media screen and (min-width: 1280px) {
-        & &__container {
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 3rem;
-        }
-
-        & &__title {
-            font-size: 1.5rem;
-        }
-
-    }
-
-    @media screen and (min-width: 1440px) {
-        & &__article {
-            grid-template-rows: 300px 40px 1fr 30px;
-            padding: 2rem;
-        }
-
-        & &__image {
-            height: 300px;
-        }
-
-        & &__category,
-        & &__date {
-            font-size: 1.5rem;
-        }
-
-        & &__title {
-            font-size: 2rem;
-        }
-
     }
 }
